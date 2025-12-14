@@ -1,5 +1,4 @@
 # Wordle-Game-Project
-Description
 This project is a terminal-based implementation of the popular game Wordle, written entirely in C. It features two distinct game modes:
 
 Human Mode: You play the game manually, trying to guess the hidden 5-letter word within 6 attempts.
