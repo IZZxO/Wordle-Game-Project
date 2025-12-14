@@ -160,9 +160,24 @@ int main() {
     strcpy(target, dictionary[rand() % wordCount]);
 
     int mode;
-    printf("Mode de jeu:\n");
-    printf("1 - Joueur humain\n");
-    printf("2 - Solver automatique\n");
+    printf("=====================================\n");
+printf("        WELCOME TO WORDLE GAME        \n");
+printf("=====================================\n\n");
+
+printf("Rules of the game:\n");
+printf("- The computer has chosen a hidden 5-letter word.\n");
+printf("- You have 6 attempts to guess the correct word.\n");
+printf("- After each guess, you will receive feedback:\n");
+printf("  * Green : Correct letter in correct position.\n");
+printf("  * Yellow : Correct letter in wrong position.\n");
+printf("  * Gray : Letter not in the word.\n\n");
+
+printf("Type your 5-letter word and press Enter.\n");
+printf("Good luck and have fun!\n\n");
+printf("1-Manual Mode:\nYou will guess the word by typing each attempt yourself.\nYou have 6 tries to find the correct 5-letter word.\n\n");
+
+printf("2-Automatic Mode:\nThe computer will generate guesses automatically.\nWatch how the game is solved step by step.\n\n");
+
     printf("Choix: ");
     scanf("%d", &mode);
     getchar();
@@ -176,10 +191,10 @@ int main() {
         char guess[WORD_LEN + 1];
         char input[100];
 
-        printf("\nTentative %d/%d\n", attempt, MAX_ATTEMPTS);
+        printf("\nAttempt %d/%d\n", attempt, MAX_ATTEMPTS);
 
         if (mode == 1) {
-            printf("Entrez un mot: ");
+            printf("Enter a word: ");
             fgets(input, sizeof(input), stdin);
 
             size_t len = strlen(input);
@@ -205,7 +220,8 @@ int main() {
         }
 
         if (strcmp(guess, target) == 0) {
-            printf(COLOR_GREEN "\nGAGNÉ ! Mot = %s\n" COLOR_RESET, target);
+            printf(COLOR_GREEN "\nCONGRATULATIONS! You won! Word = %s\n" COLOR_RESET, target);
+
             return 0;
         }
 
@@ -215,7 +231,12 @@ int main() {
             filterPossibleWords(possibleWords, &possibleCount, guess, target);
     }
 
+    printf(COLOR_GRAY "\nBetter luck next time! The word was: %s\n" COLOR_RESET, target);
+
+    return 0;
+}
     printf(COLOR_GRAY "\nPERDU ! Mot = %s\n" COLOR_RESET, target);
     return 0;
 }
+
 
