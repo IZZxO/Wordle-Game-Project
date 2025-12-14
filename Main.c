@@ -235,8 +235,4 @@ printf("2-Automatic Mode:\nThe computer will generate guesses automatically.\nWa
 
     return 0;
 }
-    printf(COLOR_GRAY "\nPERDU ! Mot = %s\n" COLOR_RESET, target);
-    return 0;
-}
-
 
