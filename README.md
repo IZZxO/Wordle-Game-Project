@@ -8,5 +8,7 @@ Automatic Solver: An AI bot plays the game itself. It uses a "filtering" algorit
 The objective of this project is to demonstrate efficient string manipulation, file handling, and algorithmic logic (filtering search space) in C.
 <img width="1107" height="616" alt="image" src="https://github.com/user-attachments/assets/6e777245-ad26-4f22-9370-6f2a8afb3399" />
 <img width="1112" height="619" alt="image" src="https://github.com/user-attachments/assets/0e5a60e9-6ee3-4d55-bd02-b48e713a20ce" />
+<img width="1107" height="618" alt="image" src="https://github.com/user-attachments/assets/5703c072-8bdd-47aa-95e0-2cd3398ff9ba" />
+
 
 
