@@ -92,3 +92,4 @@ printf("2-Automatic Mode:\nThe computer will generate guesses automatically.\nWa
     return 0;
 }
 
+
