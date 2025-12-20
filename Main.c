@@ -33,10 +33,15 @@ printf("Good luck and have fun!\n\n");
 printf("1-Manual Mode:\nYou will guess the word by typing each attempt yourself.\nYou have 6 tries to find the correct 5-letter word.\n\n");
 
 printf("2-Automatic Mode:\nThe computer will generate guesses automatically.\nWatch how the game is solved step by step.\n\n");
+do{
 
     printf("Choix: ");
     scanf("%d", &mode);
     getchar();
+    if (mode != 1 && mode != 2) {
+        printf("Error! Please choose 1 or 2 \n");
+    }
+}while(mode != 1 && mode != 2);
 
     char possibleWords[MAX_WORDS][WORD_LEN + 1];
     int possibleCount = wordCount;
@@ -91,5 +96,6 @@ printf("2-Automatic Mode:\nThe computer will generate guesses automatically.\nWa
 
     return 0;
 }
+
 
 
